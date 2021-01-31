@@ -1,0 +1,515 @@
+@font-face {  
+    font-family: Alegreya-Black; src: url(docs/alegreya/Alegreya-Black.ttf);
+    font-family: AEBI; src: url(docs/alegreya/Alegreya-ExtraBoldItalic.ttf);
+    font-family: AR; src: url(docs/alegreya/Alegreya-Regular.ttf);
+    font-family: AM; src: url(docs/alegreya/Alegreya-Medium.ttf);
+    font-family: AMI; src: url(docs/alegreya/Alegreya-MediumItalic.ttf);
+}
+html{
+    height: 100%;
+} 
+
+ul{
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.container {
+    position: relative;
+    display: grid;
+    min-height: 100%;
+    width: 100%;
+    grid-template-columns: 23% 18% 18% 18% 23%;
+    margin: 0px;
+    grid-template-rows: 100px 65px 120px auto auto auto auto auto auto auto 50px; 
+}
+.griditem {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    
+}
+h1 {
+    font-size: 18px;
+    font-family: sans-serif;
+}
+h2 {
+    font-family: sans-serif;
+}
+.rightjust {
+    margin: 10px;
+}
+
+/*.sportsSill{
+    background-image: url("images/backgrounds/silhouette-1975689.png");
+    background-opacity: 
+    
+}*/
+
+
+/* Header and nav bar */
+
+.header {
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    overflow: hidden;
+}
+.headerImage {
+    padding-bottom: 2px; 
+}
+.navGroup {
+    background-color: cadetblue;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+
+
+    grid-column-start: 2;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 2;
+  }
+.navList {
+    float: left;
+    border-right: 2px solid rgb(221, 214, 214);  
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 22px;
+
+}
+.home {
+    background-color: rgb(49, 133, 136);
+    border-right: 2px solid rgb(221, 214, 214);
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    padding-right: 8px;
+    transition: 0.5s;
+}
+.homePic {
+    height: 40px;
+    width: 40px;
+    padding-top: 11.5px;
+    float: right;
+}
+.home :hover {
+    transform: scale(1.2);
+    top: 50px;
+}
+li a:hover {
+    background-color: rgb(50, 92, 94);
+}
+
+
+ @media screen and (min-width: 0px) and (max-width: 1100px) {
+    #container {
+    grid-template-columns:  5% 30% 30% 30% 5%;
+    grid-template-rows: 80px 65px auto auto auto auto auto auto auto 50px;
+    }
+    ul {
+        font-size: 12px;
+    }
+    .griditem{
+        font-size: 12px;
+    }
+    .homePic {
+        transform: scale(.8);
+    }
+    #item1 {
+        text-align: center;
+        font-size: 18px;
+        margin: none;
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+    #homePic {
+        height: 40px;
+        width: 40px;
+        padding-top: 11.5px;
+    }
+    #item2 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        text-align: center;
+    }
+    #item3 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+
+        text-align: center;
+    }
+    #item4 {
+        grid-column-start: 2;
+        text-align: center;
+    }
+    #item5 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        text-align: center;
+    }
+    #item6 {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        text-align: center;
+    }
+    #item2l2{
+        grid-column-start: 2;
+        grid-column-end: 5;
+    }
+} 
+
+
+
+.item1 {
+    font-size: 18px;
+    text-align: center;
+    margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+}
+.item2 {
+    margin: auto;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    text-align: center;
+    padding-bottom: 1%; 
+}
+.item3 {
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    text-align: center;
+    padding-bottom: 1%; 
+}
+.homePics {
+    margin: auto;
+    max-height: auto;
+    max-width: 100%;  
+    background-size: contain;
+}
+.item4 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1%;
+}
+.item5 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 1%;
+}
+.item6 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.footer {
+    position: absolute; 
+    bottom: 0;
+    height: 75px;
+    width: 100%;
+    background-color: cadetblue;
+    margin-top: auto;
+}
+/* heading under nav bar and text/picture layout*/
+
+
+/* heading under nav bar and text/sub heading layout*/
+
+.item1Header{
+
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 3; 
+}
+.item1HeaderText{
+    font-size: 30px;
+    vertical-align: text-top; 
+    width: 100%;
+    text-align: center;
+    border-top: groove;
+    border-bottom: groove;
+    padding: 18px 0px 18px 0px;
+}
+.item2l2{
+    grid-column-end: 5;
+    grid-column-start: 2;
+    grid-row-end: 4 ;
+    grid-row-start: 4;
+    padding-bottom: 20px;
+}
+
+.largepic :hover {
+    transform: scale(1.05);
+    top: 50px;
+}
+
+/* layout with image and description next to it */
+
+
+.l3backs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(216, 147, 83, 0.041);
+    border: solid rgba(216, 147, 83, 0.315);
+    margin: 10px;
+ }
+.item3l3 {
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    text-align: center;
+    padding-bottom: 1%;
+    
+    
+    
+}
+.item4l3 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 5;
+
+}
+.item5l3 {
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 6;
+    text-align: center;  
+}
+.item6l3 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 6;
+}
+.item7l3 {
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 7;
+    grid-row-end: 7;
+    text-align: center;
+  
+    
+}
+.item8l3 {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 7;
+    grid-row-end: 7;
+}
+.item9l3 {
+    
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    text-align: center;
+    
+    
+}
+.item10l3 {
+    margin-top: 0px;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 8;
+    
+}
+
+.item11l3 {
+    padding-top: 20px;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 9;
+    grid-row-end: 9;
+    text-align: center;
+    margin: auto;
+    padding-bottom: 50px;
+}
+.l3pics{
+    padding-top:20px;
+    height: 50%; 
+    width: 50%;
+    padding-bottom: 20px;
+    object-fit: contain;
+}
+
+.l3backs :hover {
+    transform: scale(1.2);
+    top: 50px;
+}
+
+/*image gallery */
+
+.gallary-grid{
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 4;
+
+    padding-left: 3%;
+    padding-right: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    background-color: rgba(95, 158, 160, 0.151);
+    text-align: center;
+    word-wrap: break-word;
+    margin-bottom: 100px;
+    margin-top: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.titleElements{
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    display: flex;
+    background-color: rgba(216, 147, 83, 0.664);
+    border: solid rgba(216, 147, 83, 0.801);
+    width: 290px; 
+    padding-left: 5px;
+    padding-right: 5px
+}
+figcaption{
+    margin: 2%;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.figcaptionl{
+    width: 285px;
+    justify-content: center;
+    margin: 2%;
+    font-family: sans-serif;
+}
+
+.gallary-frame{
+    width: 220px;
+    background-color: rgba(216, 147, 83, 0.144);
+    border: solid rgba(216, 147, 83, 0.411);
+}
+.gallary-framel{
+    width: 300px;
+    background-color: rgba(216, 147, 83, 0.144);
+    border: solid rgba(216, 147, 83, 0.411);
+}
+.gallery-img{
+max-height: 100%;
+max-width: 100%;
+}
+.kl {
+    border: solid rgba(111, 111, 208, 1);
+}
+
+/* image galery JS interaction */
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  .menu_links {
+       cursor: pointer; 
+    }
