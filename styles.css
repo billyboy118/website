@@ -438,6 +438,9 @@ max-width: 100%;
 .kl {
     border: solid rgba(111, 111, 208, 1);
 }
+.prod {
+    border: solid rgba(164, 124, 191, 255);
+}
 
 /* image galery JS interaction */
 
@@ -458,6 +461,8 @@ max-width: 100%;
   
   /* Modal Content */
   .modal-content {
+    font-family: sans-serif;
+    line-height: 24px;
     position: relative;
     background-color: #fefefe;
     margin: auto;
@@ -499,7 +504,7 @@ max-width: 100%;
   
   .modal-header {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: cadetblue;
     color: white;
   }
   
@@ -507,7 +512,7 @@ max-width: 100%;
   
   .modal-footer {
     padding: 2px 16px;
-    background-color: #5cb85c;
+    background-color: cadetblue;
     color: white;
   }
 
