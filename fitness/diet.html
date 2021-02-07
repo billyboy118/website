@@ -30,11 +30,16 @@
             Diet
             </p>
         </div>
-        
+       
+
         <div class="item2l2 griditem" id="item2l2">
             <p>
-                 Yes that is it I have managed to install it
+                 First of all I thought that I would put this chart in below just  to show that I do practice what I preach, as I have also created this web site to help with my coding in creating this graph I have used chart.JS which is pretty cool.
+                  My original hope was that I would be able to integrate this with Garmin but it turns out Garmin dont have any public facing APIs so how I have had to do it is pull all my data from MyfItness pal and then I wrote a script in JS to map
+                weights and data points    
             </p>
+           <canvas id="myChart" width="400" height="150"></canvas>  
+            <button onclick="resetZoom()"> reset chart </button>
         </div>
 
    
@@ -46,6 +51,11 @@
 
     
     <div class="footer"></div>    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
+   
+    <script src="../script.js"></script>
     </body>
 
  
