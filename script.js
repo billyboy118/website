@@ -37,70 +37,76 @@ window.onclick = function(event) {
 
 var reset = document.querySelectorAll("chartReset");
 
+
+
+
+
+
+
 let a = [100, 97, 80, 75, 72, 70,100, 97, 80, 75, 72, 70,100, 97, 80, 75, 72, 70, 71, 72];
-let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let c = ['jan', 'feb', 'march', 'april', 'may', 'jan', 'feb', 'march', 'april', 'may', 'jan', 'feb', 'march', 'april', 'may','jan', 'feb', 'march', 'april', 'may'];
+let z = ['2020/2/11', '12/2/2020', '13/3/2020', '19/5/2021', '30/7/2021','11/2/2020', '12/2/2020', '13/3/2020', '19/5/2021', '30/7/2021','11/2/2020', '12/2/2020', '13/3/2020', '19/5/2021', '30/7/2021','11/2/2020', '12/2/2020', '13/3/2020', '19/5/2021', '30/7/2021']
+let p = ['2020/2/11', '2020/2/15', '2020/3/11','2020/3/19','2020/4/11','2020/4/19','2020/5/11','2020/5/29','2020/7/11','2020/8/11','2020/2/11', '2021/2/15','2021/3/11','2021/3/19','2021/4/11','2021/4/19','2021/5/11','2021/5/29','2021/7/11','2021/8/11']
+
+let dates = [];
+
+for (var i = 0; i < 20; i++) {
+  let a = new Date(p[i]);
+  a = a.toLocaleDateString()
+  dates.push(a);
+};
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: b,
+        labels: dates, 
         datasets: [{
             data: a,
-
-
             borderWidth: 1
-        }]
+        }],
     },
-
-
     options: {
       pan: {
-         enabled: true,
-         mode: "xy",
-         speed: 5,
-         threshold: 100,
-        
-       },
-       zoom: {
-      
-         //threshold: 10,
-         enabled: true,
-         //drag: true,
-         mode: "xy",
-         limits: {
-           max: 100,
-           min: 5
-         },
+        enabled: true,
+        mode: "xy",
+        speed: 3,
+        threshold: 100,
       },
-      // responsive: true,
-   //    legend: {
-   //       display: false
-   //   },
+      zoom: {
+        enabled: true,
+        mode: "x",
+          limits: {
+            max: 110,
+            min: 10,
+          },
+      },
+      responsive: true,
+      legend: {
+        display: false
+      },
       title: {
-         display: true,
-         text: 'My Weight Over The Last Couple of Years',
-         fontSize: 25,
-         padding: 20,
-         speed: 2,
+        display: true,
+        text: 'My Weight Over The Last Couple of Years',
+        fontSize: 25,
+        padding: 20,
+        speed: 2,
        },
-        scales: {
-            yAxes: [{
+      scales: {
+        yAxes: [{
                 ticks: {
-                    min: 50,
-                    max: 110,
+                  min: 50,
+                  max: 110,
                 },
                 scaleLabel: {
                   display: true,
                   labelString: 'Weight',
                 }
-            }]
+            }],
         }
    },
-
-
 });
-
 window.resetZoom = function() {
    window.myChart.resetZoom();
 };
