@@ -71,16 +71,17 @@ var myChart = new Chart(ctx, {
       pan: {
         enabled: true,
         mode: "xy",
-        speed: 3,
+        speed: .5,
         threshold: 100,
       },
       zoom: {
+        speed: .5,
         enabled: true,
         mode: "x",
-          limits: {
-            max: 110,
-            min: 10,
-          },
+          // limits: {
+          //   max: 110,
+          //   min: 10,
+          // },
       },
       responsive: true,
       legend: {
