@@ -37,33 +37,32 @@ window.onclick = function(event) {
 
 var reset = document.querySelectorAll("chartReset");
 
-
-
-
-
-
-
-let a = [100, 97, 80, 75, 72, 70,100, 97, 80, 75, 72, 70,100, 97, 80, 75, 72, 70, 71, 72];
-let b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-let c = ['jan', 'feb', 'march', 'april', 'may', 'jan', 'feb', 'march', 'april', 'may', 'jan', 'feb', 'march', 'april', 'may','jan', 'feb', 'march', 'april', 'may'];
-let z = ['2020/2/11', '12/2/2020', '13/3/2020', '19/5/2021', '30/7/2021','11/2/2020', '12/2/2020', '13/3/2020', '19/5/2021', '30/7/2021','11/2/2020', '12/2/2020', '13/3/2020', '19/5/2021', '30/7/2021','11/2/2020', '12/2/2020', '13/3/2020', '19/5/2021', '30/7/2021']
-let p = ['2020/2/11', '2020/2/15', '2020/3/11','2020/3/19','2020/4/11','2020/4/19','2020/5/11','2020/5/29','2020/7/11','2020/8/11','2020/2/11', '2021/2/15','2021/3/11','2021/3/19','2021/4/11','2021/4/19','2021/5/11','2021/5/29','2021/7/11','2021/8/11']
-
+ab = d3.csv("weight.csv", function(data) {
+   weights = [];
+   date = [];
+  for (var i = 0; i < data.length; i++) {
+      // console.log(data[i].Date);
+      
+      console.log(data[i].Weight);
+      weights.push(parseFloat(data[i].Weight));
+      date.push(data[i].Date);
+  }
+  
 let dates = [];
 
-for (var i = 0; i < 20; i++) {
-  let a = new Date(p[i]);
-  a = a.toLocaleDateString()
-  dates.push(a);
-};
+// for (var i = 0; i < 20; i++) {
+//   let a = new Date(p[i]);
+//   a = a.toLocaleDateString()
+//   dates.push(a);
+// };
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: dates, 
+        labels: date, 
         datasets: [{
-            data: a,
+            data: weights,
             borderWidth: 1
         }],
     },
@@ -107,6 +106,7 @@ var myChart = new Chart(ctx, {
             }],
         }
    },
+});
 });
 window.resetZoom = function() {
    window.myChart.resetZoom();
