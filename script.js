@@ -37,6 +37,7 @@ window.onclick = function(event) {
 
 var reset = document.querySelectorAll("chartReset");
 
+
 ab = d3.csv("weight.csv", function(data) {
    weights = [];
    date = [];
@@ -96,7 +97,7 @@ var myChart = new Chart(ctx, {
       scales: {
         yAxes: [{
                 ticks: {
-                  min: 50,
+                  min: 70,
                   max: 110,
                 },
                 scaleLabel: {
@@ -107,6 +108,9 @@ var myChart = new Chart(ctx, {
         }
    },
 });
+
+
+
 });
 window.resetZoom = function() {
    window.myChart.resetZoom();
