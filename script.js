@@ -37,25 +37,20 @@ window.onclick = function(event) {
 
 var reset = document.querySelectorAll("chartReset");
 
-
-ab = d3.csv("weight.csv", function(data) {
    weights = [];
    date = [];
+
+
+ab = d3.csv("weight.csv", function(data) {
+
   for (var i = 0; i < data.length; i++) {
-      // console.log(data[i].Date);
-      
       console.log(data[i].Weight);
       weights.push(parseFloat(data[i].Weight));
-      date.push(data[i].Date);
+      let reformat = new Date(data[i].Date);
+      console.log(typeof reformat);
+      date.push(reformat.toLocaleDateString());
   }
-  
-let dates = [];
-
-// for (var i = 0; i < 20; i++) {
-//   let a = new Date(p[i]);
-//   a = a.toLocaleDateString()
-//   dates.push(a);
-// };
+  });
 
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
@@ -75,13 +70,9 @@ var myChart = new Chart(ctx, {
         threshold: 100,
       },
       zoom: {
-        speed: .5,
+        speed: 1,
         enabled: true,
         mode: "x",
-          // limits: {
-          //   max: 110,
-          //   min: 10,
-          // },
       },
       responsive: true,
       legend: {
@@ -97,21 +88,32 @@ var myChart = new Chart(ctx, {
       scales: {
         yAxes: [{
                 ticks: {
-                  min: 70,
-                  max: 110,
+                  min: 75,
+                  max: 105,
                 },
                 scaleLabel: {
                   display: true,
-                  labelString: 'Weight',
+                  labelString: 'Weight (Kg)',
                 }
             }],
+            xAxes: [{
+                scaleLabel: {
+                  display: true,
+                  labelString: 'Weigh in day',
+                },
+                ticks: {
+                  maxTicksLimit: 20,
+                  fixedStepSize: 100,
+                },
+                
+            }]
         }
    },
 });
 
 
 
-});
+
 window.resetZoom = function() {
    window.myChart.resetZoom();
 };
