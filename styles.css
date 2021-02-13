@@ -513,13 +513,27 @@ max-width: 100%;
   .modal-footer {
     padding: 2px 16px;
     background-color: cadetblue;
-    color: white;
+    color: rgb(212, 150, 150);
   }
 
   .menu_links {
        cursor: pointer; 
     }
 
-    #ironman {
+    /* #ironman {
         transform: scale(.5);
+    } */
+
+    .largeBanner {
+        
+        text-align: center;
+        /* margin: auto; */
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 4;
+        grid-row-end: 4;
+        ;
+         border: 5px black;
+        /* box-shadow: 0 0 8px 8px white inset; */
     }
+

@@ -34,39 +34,38 @@ window.onclick = function(event) {
     }
 }
 
-
 var reset = document.querySelectorAll("chartReset");
+
+var ctx = document.getElementById('myChart').getContext('2d');
+
+
 
    weights = [];
    date = [];
 
 
 ab = d3.csv("weight.csv", function(data) {
-
   for (var i = 0; i < data.length; i++) {
-      console.log(data[i].Weight);
-      weights.push(parseFloat(data[i].Weight));
-      let reformat = new Date(data[i].Date);
-      console.log(typeof reformat);
-      date.push(reformat.toLocaleDateString());
+    weights.push(parseFloat(data[i].Weight));
+    let reformat = new Date(data[i].Date);
+    date.push(reformat.toLocaleDateString());
   }
-  });
 
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+  myChart = new Chart(ctx, {
+  
     type: 'line',
     data: {
         labels: date, 
         datasets: [{
             data: weights,
-            borderWidth: 1
+            borderWidth: 1,
         }],
     },
     options: {
       pan: {
         enabled: true,
         mode: "xy",
-        speed: .5,
+        speed: 1,
         threshold: 100,
       },
       zoom: {
@@ -76,7 +75,7 @@ var myChart = new Chart(ctx, {
       },
       responsive: true,
       legend: {
-        display: false
+        display: false,
       },
       title: {
         display: true,
@@ -102,18 +101,15 @@ var myChart = new Chart(ctx, {
                   labelString: 'Weigh in day',
                 },
                 ticks: {
-                  maxTicksLimit: 20,
-                  fixedStepSize: 100,
+                  maxTicksLimit: 10,
+                  // fixedStepSize: 100,
                 },
                 
             }]
         }
    },
 });
-
-
-
-
+});
 window.resetZoom = function() {
    window.myChart.resetZoom();
 };
