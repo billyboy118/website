@@ -285,16 +285,12 @@ li a:hover {
     margin: 10px;
  }
 .item3l3 {
-    
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 5;
     grid-row-end: 5;
     text-align: center;
-    padding-bottom: 1%;
-    
-    
-    
+    padding-bottom: 1%; 
 }
 .item4l3 {
     grid-column-start: 3;
@@ -536,82 +532,250 @@ max-width: 100%;
 
 
     .calc {
-        height: 3em;
-        width: 5em; 
         font-size: 30px;
-        
+        height: 90px; 
     }
-    
     #screen {
         border: solid;
         background-color:black;
-        height: 1.2em;
-        width: 9.4em; 
         grid-column: 1 / span 5;
         color: ivory;
-        font-size: 80px;
+        font-size: 78px;
         text-align: right;
         padding-right: 20px;  
-    
     }
-    
     #zero {
-        
-        height: auto;
-        width: auto; 
         grid-column: 1 / span 2;
     }
-    
-    #equals {
-        
-        height: auto;
-        width: auto; 
+    #equals {   
         grid-column: 4 / span 2;
     }
-    
     #c {
     background-color: lightcoral;
     }
-    
     #x {
     background-color: lightskyblue;
     }
-    
     #del {
     background-color: lightcoral;
     }
-    
     #plus {
     background-color: lightskyblue;
     }
-    
     #equals {
     background-color: lightgreen;
     }
-    
     #take {
     background-color: lightskyblue;
     }
-    
-    
     #div {
      background-color: lightskyblue;
     }
-    
     .calculator {
-        /* justify-content: center;
-        /* position: absolute; */
-        /* left: 50%;  */ 
-        /* margin-left: -24.5em; */
-        /* top: 50%;  */
-        /* margin-top: -24.5em; */
-        width: 49em;
         display: grid;
         grid-gap: 5px;
-        
-        grid-template-columns: 9.5em 9.5em 9.5em 9.5em 9.5em; 
+        grid-template-columns: auto auto auto auto auto;
         grid-template-rows: auto auto auto auto auto;
         background-color: gray;
         border: gray;
         padding: 10px;
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        color: rgb(126, 26, 26); 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 20px; 
+        font-weight: bold; 
+        letter-spacing: -1px; 
+        text-align: center;   
+        margin-bottom: 10px; 
+        margin-top: 20px; 
+    }
+    /*#winLoss{
+        color: rgb(126, 26, 26); 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 80px; 
+        font-weight: bold; 
+        letter-spacing: -1px; 
+        text-align: center;   
+        margin-bottom: 0px; 
+        margin-top: 10px
+    }
+    */
+    
+    
+    
+    .winLoss1 {
+        color: rgb(126, 26, 26); 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 40px; 
+        font-weight: bold; 
+        letter-spacing: -1px; 
+        text-align: center;
+        line-height: 50px;
+    
+    
+        width: 150px;
+        height: 50px;
+        background-color: red;
+        position: relative;
+        animation-name: example;
+        animation-duration: 15s;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        margin-left: 25%;
+    }
+      
+    @keyframes example {
+        0%   {background-color:red; left:0px; top:0px;}
+        25%  {background-color:yellow; left:60%; top:0px;}
+        50%  {background-color:blue; left:0px; top:00px;}
+        75%  {background-color:green; left:0px; top:00px;}
+        100% {background-color:red; left:0px; top:0px;}
+    }
+    .names{
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-evenly;
+        color: rgb(126, 26, 26); 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 30px;
+        
+    }
+    #n3 {
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    
+    .activePlay {
+        display: flex;
+        justify-content: space-evenly; 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 20px; 
+        
+    }
+    .plays {
+        height: 150px;
+        width: 150px;
+        background-size: large;
+        background-color:black;
+        color: white;
+        text-align: center;
+        line-height: 150px;   
+    }
+    #vs {
+        color: white;
+        font-size: 100px;
+        margin-top: 40px;
+    }
+    
+    
+    #player{
+        background-size: 100%;
+        background-repeat: no-repeat;
+    
+    }
+    #computer{
+        background-size: 100%;
+        background-repeat: no-repeat;
+    
+    }
+    
+    #scores {
+        display: flex;
+        justify-content: space-evenly;
+        color: rgb(126, 26, 26); 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 40px;
+        margin-top: 40px;
+    
+    }
+    #rounds {
+        line-height: 5px;
+    }
+    
+    #games {
+        line-height: 5px;
+        margin-left: px;
+        margin-right: 10px;   
+    }
+    .scoresC {
+        
+        height: 70px;
+        width: 70px;
+        background-size: large;
+        background-color:  black;
+        color: white;
+        text-align: center;
+        line-height: 70px;
+    }
+    .roundC {
+        margin-top:20px; 
+        display: flex;
+        justify-content: space-evenly;
+        color: rgb(126, 26, 26); 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 25px;
+    }
+    .roundD {
+        margin-top:10px ;
+        display: flex;
+        justify-content: space-evenly;
+        color: rgb(126, 26, 26); 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 25px;
+    }
+    #PS{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        color: rgb(126, 26, 26); 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 40px;
+        margin-bottom: 0;
+    
+    }
+    .playerSelection {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center; 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 25px;
+    }
+    .rps {
+        margin-left: 5px;
+        scroll-margin-right: 5px;
+        height: 150px;
+        width: 150px;
+        background-size: large;
+        background-color: black;
+        color: white;
+        text-align: center;
+        line-height: 150px;
+        border: 3px solid #666;
+        
+    } 
+    #rock {
+        background-image: url("rock-md.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    #paper {
+        background-image: url("paper-md.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    #scissors {
+        background-image: url("scissors-md.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    #select {
+        margin-top: 5px;
+        display: flex;
+        justify-content: center; 
+        font-family: 'Helvetica Neue', sans-serif; 
+        font-size: 25px; 
+        color: rgb(126, 26, 26); 
     }
