@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lan="en">
+    <head> <!-- Initial google project for Odin project--> 
+        <meta charset="utf-8">        
+        <style>
+            #page-container {
+                position: relative;
+                min-height: 100vh;
+            }
+            #content-wrap {
+                padding-bottom: 2.5rem; /*footer height */
+                min-height: 520px;
+            }
+            #footer {
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 3.5rem;
+                background-color: rgb(235, 233, 233);
+                display: flex;
+                justify-content: space-between;
+                flex: wrap;
+                border-top: solid grey;
+                margin-right: 30px;
+                overflow-y: hidden;
+                min-width: 850px;
+                border-width: thin;
+
+            }
+
+            #gap {
+                justify-content: center;
+                flex-grow: 1;
+                min-width: 100px;
+
+
+            }
+
+            .footer-el {
+                padding-top: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(113,113,113);
+                text-decoration: none;
+                padding-left: 20px;
+            }
+            .footer-el:hover{
+                text-decoration: underline;
+            }    
+            #f1 {
+                padding-left: 30px;   
+            }
+            #f2 {
+                padding-right: 40px;
+                padding-left: 40px;
+            }    
+ 
+            #f4 {
+                padding-right: 40px;   
+            }
+            #f5 {
+                padding-right: 40px;   
+            }
+            #f6 {
+            margin-right: 20px;
+
+            }  
+            #div1 {
+                margin-top: 200px;
+                display: flex;
+                justify-content: center;
+            }
+
+            #search-bar1 {
+                justify-content: center;
+                margin: auto;
+                position: relative;
+                Top: 30px;
+                width: 487px;
+                height: 40px;
+                border-radius: 24px;
+                box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28); 
+            }  
+
+            #search-bar1:hover {
+                /*background-color: red;*/    
+                box-shadow: 0px 1px 6px 6px rgba(32,33,36,0.5);  
+            }
+
+            #glass-1 {
+                justify-content: center;
+                position: relative;
+                top: 9px;
+                left: 9px;
+                max-width: 50%;
+                max-height: 50%; 
+            }
+
+
+            #search-box {
+                position: relative;
+                left: 12px;
+                top: 5px;
+                width: 410px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: medium;
+                border-color: rgba(223,225,229,0);
+                background-color: none;
+                Outline: 0px; 
+            } 
+
+            #mic {
+                justify-content: center;    
+                max-width: 50%;
+                max-height: 50%;
+                position: relative;
+                top: 8px;
+                left:8px;   
+            }
+
+            .container-button {
+                position: relative;
+                text-align: center;
+                top: 80px; 
+            }
+
+            .google-style {    
+                padding: 10px;
+                color: gray;width:  -moz-maz-content;
+                border: none;
+                border-radius: 5px;
+
+            }
+
+            .google-style:hover {
+                color: black;
+                box-shadow: 1px 1px 1px 1px rgba(32,33,36,0.5);
+            } 
+
+            .google-style:active {
+                box-shadow: 0 0px #666;
+                transform: translateY(1px);
+            }
+            #b1 {
+                position: relative;    
+                right: 8px;
+                outline: none;
+            } 
+            #b2 {
+                position: relative; 
+                left: 8px;
+                outline: none;
+            }
+
+            body {
+                display: block;
+                margin:0;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding:0;
+                /*position: relative;
+                justify-content: center;*/
+                width: 90%;
+                display: flex;
+
+
+            }
+            li {
+                display: inline;
+            }
+            #nav123 {
+                display: flex;
+                align-items: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(113,113,113);
+                text-decoration: none; 
+                background-color: white;
+                height: 40px; 
+                padding-top: 10px; 
+                width: 100%;
+                min-width: 850px;
+
+            }
+
+            .header1 {
+                font-family: Arial, Helvetica, sans-serif;
+                color: rgb(113,113,113);
+                text-decoration: none;
+                padding: 20px;
+            }
+            .header1:hover {
+                text-decoration: underline;
+            }
+
+
+            #b3 {
+                background-color: blue;
+                color: white;
+                justify-content: flex-end;
+            }
+            #space2 {
+                width: 100%;
+                flex-grow: 1;
+            }
+            #b3 {
+                min-width:75px;
+                margin-right: 18px;
+                height: 30px;
+            } 
+            #b3:active {
+                background-color: lightskyblue;
+                box-shadow: 0 0px #666;
+                transform: translateY(4px);
+            }
+            #pic1 {
+                max-height: 70%;
+                padding-right: 50px;
+                padding-left: 30px;
+            }
+        </style>
+    </head>    
+    <body>        
+        <div id="page-container">
+            <div id="content-wrap">
+                <nav id="nav123">
+                    <ul>
+                        <li><a class="header1" href= ""> About</a></li> 
+                        <li><a class="header1" href= "">Store</a></li> 
+                        <div id="space2"></div>
+                        <li><a class="header1" href= "">Gmail</a></li>
+                        <li><a class="header1" href="">Images</a></li>
+                    </ul>
+                    <img id="pic1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAQlBMVEVBQEL///8wLjHQ0NCWlpc4Njk6OTuCgYL39/ctLC7g4ODNzc4kIiWQkJAnJSh6ensZFxvx8fK0tLW/v8Cop6jr6+vKNiELAAACCklEQVR4nO3dW26DUBAEUQx2bAN+Jt7/VrOCDFKpo2jiqgW05nxfIYYBNU67ov2BbH4cq83dNLJTYQrJpkKF2RSSTYUKsykkmwoVZlNINhUqzKaQbCpUmE0h2VSoMJtCsqlQYTaFZFOhwmwKyaZChdkUkk2FCrMpJJsKFWZTSDYVKsymkGwqVJitk3BE3ZfqmMtKNq+3Urjc2anDhFoe1THzgkbnUvhgo9NQrv6HFPZPYf8U9k9h/xT2T2H/FPZPYf8U9k9h/xT2T2H/FPbvDYR71KV8Rfm8oNFneenMRvfDAbXWr2tnsjluvK6t7FT66tjohZSlkGwqVJhNIdlUqDCbQrKpUGE2hWRTocJsCsmmQoXZFJJNhQqzKSSbChVmU0g2FSrMppBsKlSYTSHZVKgwm0KyqVBhNoVkU6HCbArJpkIq/EBda+FINscN4ZWdOhxRt/JrhOcNjX6VwpmNHt/gi5K/PuDXU9g/hf1T2D+F/VPYP4X9U9g/hf1T2D+F/VPYP4X9U9i/YWadqtEX23yVl57gpcMZtfUXFrK5bv2FhZ0KXx07vZCyFJJNhQqzKSSbChVmU0g2FSrMppBsKlSYTSHZVKgwm0KyqVBhNoVkU6HCbArJpkKF2RSSTYUKsykkmwoVZlNINhUqzKaQbCpUmE0h2VSo8KfYj5I7/dP5xCqPgZv1KF39BoBdkwtY25a+AAAAAElFTkSuQmCC"> 
+
+                    <button id="b3" type="button">Sign In</button>
+                </nav>
+
+
+                <div id="div1"> 
+                    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="googlelogo">
+                </div>    
+
+                <div id="search-bar1">  
+                    <img id="glass-1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRtyRlk9vEIvzVqehthxN30HL1ffRPfQ_oNZGQIJH7hNJk1bZV4&usqp=CAU">
+                    <input id="search-box" type="text"> </input>
+                    <img id="mic" src="https://lh3.googleusercontent.com/proxy/9WK4WFB_CHU38NKcqV3siVjYdKbFXzvD0XH8pvXfMdpJzkt04Gm9yn5N8DWQyJg_eBm64IlvHCVNPX7vVc-c2GEbraVBZrw">
+                </div>
+
+
+                <div class="container-button">
+                    <button class="google-style" id="b1" type="button">
+                        Google Search
+                    </button>
+                    <button class="google-style" id="b2" type="button">
+                        I'm Feeling lucky
+                    </button>
+                </div>
+            </div> 
+
+            <footer id="footer">
+                <a class="footer-el" id="f1" href="">Advertising</a>
+                <a class="footer-el" id="f2" href="">Business</a>
+                <a class="footer-el" id="f3" href="">How Search Works</a>
+                <div id="gap"> </div>
+                <a class="footer-el" id="f4" href="">Privacy</a>
+                <a class="footer-el" id="f5" href="">Terms </a>
+                <a class="footer-el" id="f6" href="">Settings</a>
+                </div>
+            </footer>
+
+        </div>
+    </body>
+</html> 

@@ -36,6 +36,17 @@ h1 {
 h2 {
     font-family: sans-serif;
 }
+h3 {
+    font-family: sans-serif;
+    margin: 1px;
+}
+.h3Margin {
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+
+
 .rightjust {
     margin: 10px;
 }
@@ -76,7 +87,7 @@ h2 {
     float: left;
     border-right: 2px solid rgb(221, 214, 214);  
 }
-li a {
+.linkedList a {
     display: block;
     color: white;
     text-align: center;
@@ -807,4 +818,49 @@ max-width: 100%;
         font-size: 25px; 
         color: rgb(126, 26, 26); 
         padding-bottom: 55px;
+    }
+
+     /*etch*/
+
+    .buttonCont {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .buttons {
+        height: 30px;
+        width: 60px;
+        margin: 10px;
+    }
+    #random {
+        font-size: 10px;
+    }
+    
+    .cont { 
+        margin: 0 auto ;
+        border: 5px solid black;
+        height: 650px;
+        width: 650px;
+        display: grid;
+        grid-gap: 0px;
+        background-color: white;
+        margin-bottom: 50px
+    
+    }
+    #etchContainer{
+        grid-template-columns: repeat(var(--colNum),auto);
+        grid-template-rows: repeat(var(--rowNum),auto);
+    }
+ 
+    
+    .gridSquares {
+        border: 1px solid black;
+        
+       height: auto;
+        width: auto;
+        
+        
+    
+    
+        
     }
