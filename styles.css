@@ -177,6 +177,14 @@ li a:hover {
         grid-column-start: 2;
         grid-column-end: 5;
     }
+    #largeBanner {
+        text-align: center;
+        grid-column-start: 2;
+        grid-column-end: 5;
+        max-width: 100%;
+        height: auto;
+    }
+
 } 
 
 /* home page images */
@@ -385,12 +393,12 @@ li a:hover {
     top: 50px;
 }   
 .largeBanner {
-    
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 4;
     grid-row-end: 4;
+    object-fit: contain;
 }
 
 
