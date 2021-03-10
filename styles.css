@@ -136,19 +136,19 @@ li a:hover {
     .homePic {
         transform: scale(.8);
     }
-    #item1 {
+    /* #item1 {
         text-align: center;
         font-size: 18px;
         margin: none;
         grid-column-start: 2;
         grid-column-end: 5;
-    }
-    #homePic {
+    } */
+    /* #homePic {
         height: 40px;
         width: 40px;
         padding-top: 11.5px;
-    }
-    #item2 {
+    } */
+    /* .item2 {
         grid-column-start: 2;
         grid-column-end: 5;
         text-align: center;
@@ -176,7 +176,7 @@ li a:hover {
     #item2l2{
         grid-column-start: 2;
         grid-column-end: 5;
-    }
+    }*/
     #largeBanner {
         text-align: center;
         grid-column-start: 2;
