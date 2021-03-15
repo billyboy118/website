@@ -29,6 +29,12 @@ ul{
     line-height: 1.6;
     
 }
+p {
+   
+    font-family: sans-serif;
+    color: #3b3738;
+}
+
 h1 {
     font-size: 18px;
     font-family: sans-serif;
