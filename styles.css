@@ -407,6 +407,11 @@ li a:hover {
     object-fit: contain;
 }
 
+.fitPicture {
+    width: 100%;
+    object-fit: cover;
+}
+
 
 /*image gallery */
 
@@ -882,10 +887,23 @@ max-width: 100%;
         border: 1px solid black;
         
        height: auto;
-        width: auto;
-        
-        
-    
-    
-        
+        width: auto;    
     }
+
+    /*Table formatting*/
+
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
