@@ -368,7 +368,7 @@ li a:hover {
     grid-column-end: 3;
     grid-row-start: 8;
     grid-row-end: 8;
-    text-align: center;   
+    text-align: center;
 }
 .item10l3 {
     margin-top: 0px;
@@ -378,15 +378,26 @@ li a:hover {
     grid-row-end: 8; 
 }
 .item11l3 {
-    padding-top: 20px;
+    margin-top: 0px;
     grid-column-start: 2;
-    grid-column-end: 5;
+    grid-column-end: 3;
     grid-row-start: 9;
     grid-row-end: 9;
     text-align: center;
-    margin: auto;
-    padding-bottom: 50px;
+
 }
+.item12l3 {
+    margin-top: 0px;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 9;
+    grid-row-end: 9;
+}
+.bottomPagePadding {
+    grid-row-start: 20;
+    grid-row-end: 20;
+}
+
 .l3pics{
     padding-top:20px;
     height: 50%; 
